@@ -1,0 +1,173 @@
+
+.header {
+  &__menu {
+    background: $blackcol;
+    position: fixed;
+    z-index: 6;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    &--logo {
+      max-width: 250px;
+      img {
+        width: 100%;
+      }
+    }
+    &--list {
+      ul {
+        margin: 0;
+        li {
+          list-style: none;
+          display: inline;
+          text-transform: uppercase;
+          padding: 20px;
+          a {
+            color: $whitecol;
+            text-decoration: none;
+            font-weight: 700;
+            position: relative;
+            &::after {
+              content: '';
+              width: 0;
+              height: 2px;
+              bottom: -7px;
+              left: 0;
+              position: absolute;
+              background: $goldlightcol;
+              transition: ease width 0.3s;
+            }
+            &:hover {
+              color: $goldlightcol;
+            }
+            &:hover::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: $blackcol;
+    opacity: 0.6;
+    z-index: 2;
+  }
+  &__heroimage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    &--content {
+      @include centercenter;
+      text-align: center;
+      color: $whitecol;
+      z-index: 3;
+      width: 50%;
+      img {
+        width: 100%;
+      }
+      h3 {
+        text-transform: none;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+/*#logosig {
+  display: none;
+}*/
+
+.footer {
+  padding: 50px 0;
+  background: $blackcol;
+  color: #fff;
+  border-bottom: $goldlightcol solid 10px;
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+  }
+  i {
+    color: $whitecol;
+  }
+  &__left{
+    flex: 0 0 40%;
+    &--social {
+      margin: 30px 0 10px;
+      article {
+        display: inline-block;
+      }
+      i {
+        margin: 5px;
+        &:hover {
+          color: $goldlightcol;
+        }
+      }
+    } 
+    img {
+      width: 90px;
+    }
+  }
+  &__right {
+    flex: 0 0 60%;
+    padding: 0 50px;
+  }
+}
+
+.tag {
+  .header__heroimage {
+    background-position: center;
+    background-image: url('http://erikadonovan.com/wp-content/uploads/2016/11/photo-1457305237443-44c3d5a30b89.jpeg') !important;
+  }
+}
+
+#thankyou {
+  .header__heroimage {
+    background-image: url(http://erikadonovan.com/wp-content/uploads/2016/11/photo-1452289765185-5df11aa2a706.jpeg) !important;
+    background-position: bottom;
+  }
+  text-align: center;
+}
+
+.display__mobile {
+  display: none;
+  position: relative;
+  i {
+    color: $whitecol;
+  }
+  ul {
+    padding: 0;
+    li {
+      display: block;
+    }
+  }
+  &--menu {
+      display: none;
+      position: absolute;
+      background: $golddarkcol;
+      right: -10px;
+      top: 42px;
+      text-align: right;
+      a:hover {
+        color: $blackcol;
+      }
+  }
+  .nav-open {
+      display: block;
+  }
+}
+

@@ -1,0 +1,38 @@
+h1, h2, h3, h4, p {
+  font-weight: 300;
+}
+
+h1 {
+  @include nopadormar;
+  font-family: $headerfont;
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-top: 55px;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: $goldlightcol;
+  &:hover {
+    color: $golddarkcol;
+    text-decoration: underline;
+  }
+}
