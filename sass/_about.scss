@@ -1,0 +1,69 @@
+// ABOUT
+
+.about {
+  margin-top: 40px;
+  .skill-icon {
+    opacity: 0;
+    transition: ease opacity 0.8s;
+  }
+  &__left {
+    width: 65%;
+    position: relative;
+    &--image {
+      img {
+        width: 75%;
+      }
+    }
+    &--headline {
+      position: absolute;
+      left: 50%;
+      top: 75px;
+      h1 {
+        font-size: 75px;
+        text-transform: uppercase;
+        line-height: 1.2;
+        color: $blackcol;
+        padding: 30px;
+        &:first-line {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  &__right {
+    width: 35%;
+    &--bio {
+      h6 {
+        color: $goldlightcol;
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 1.5;
+      }
+    }
+    &--skills {
+      .skills__flex {
+        display: flex;
+        flex-wrap: wrap;
+        article {
+          flex-basis: 14%;
+          text-align: center;
+          padding: 10px;
+          font-size: 6rem;
+          /*Style and position the date-title hover states*/
+          i {
+            position: relative;
+            color: $blackcol;
+            transition: ease color 0.8s;
+          }
+          .devicon-photoshop-plain {
+            font-size: 5rem;
+          }
+           /*These icons are not from the same family, it needed to be adjusted*/
+          .fa-map-marker {
+            vertical-align: bottom;
+          }
+        }
+      }
+    }
+  }
+}

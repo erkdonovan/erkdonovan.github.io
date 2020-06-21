@@ -1,0 +1,108 @@
+.services-types {
+  background: $goldlightcol;
+  width: 100%;
+  &--item {
+    flex: 1 0 33.33%;
+    padding: 20px;
+    position: relative;
+    background: $goldlightcol;
+      &:nth-child(even) {
+        background: $blackcol;
+        color: $whitecol;
+        a, a:hover {
+          color: $whitecol;
+        }
+        i {
+          color: $whitecol;
+        }
+      }
+    a, a:hover {
+      color: $blackcol;
+      text-decoration: none;
+    }
+    h3 {
+      &:first-line {
+        font-weight: 700;
+      }
+    }
+    i {
+      color: $blackcol;
+    }
+    &:hover .arrow {
+      left: 95%;
+    }
+    .arrow {
+      position: relative;
+      left: 0;
+      transition: left ease 0.5s;
+    }
+  }
+}
+
+
+.packages {
+  color: $blackcol;
+  position: relative;
+  padding: 50px 0;
+  &__types {
+    margin-bottom: 35px;
+    &--item {
+      flex: 1 0 33%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px 30px;
+      font-size: 1.4rem;
+      background: $lightcol;
+        &:nth-child(even) {
+          background: $whitecol;
+        }      
+      h3::first-line {
+        font-weight: 700;
+      }
+      h4 {
+        padding-top: 40px;
+        align-self: flex-end;
+      }
+      i {
+        margin: 5px 0 25px;
+        color: $goldlightcol;
+      }
+      ul {
+        margin: 0;
+        list-style-type: none;
+        padding: 0 10px;
+        li {
+          text-indent: -5px;
+          &:before {
+            content: "- ";
+            text-indent: -5px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hourlyrate {
+  color: $goldlightcol;
+  text-align: center;
+  h3 {
+    font-weight: 700;
+    padding-bottom: 45px;
+    a {
+      color: $blackcol;
+      text-decoration: underline;
+      transition: ease color 0.3s;
+      &:hover {
+        color: $golddarkcol;
+      }
+    }
+  }
+}
+
+.disclaimer {
+  margin: 0;
+  font-size: 1.3rem;
+}
